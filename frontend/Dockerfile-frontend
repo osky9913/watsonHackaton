@@ -1,0 +1,15 @@
+# Dockerfile-frontend
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY . .
+
+# Install dependencies
+RUN npm install
+
+# Build the application
+
+EXPOSE 3000
+
+CMD ["npm", "run","dev"]
